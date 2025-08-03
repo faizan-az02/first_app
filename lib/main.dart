@@ -4,6 +4,7 @@ void main() {
   runApp(MaterialApp(
     home: Scaffold(
       appBar: AppBar(
+        backgroundColor: const Color.fromARGB(255, 108, 33, 238),
         title: Text("First App"),
         centerTitle: true,
       ),
