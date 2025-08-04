@@ -19,7 +19,8 @@ void main() {
               color: Colors.white,
               fontWeight: FontWeight.bold,
               letterSpacing: 2,
-            )
+              fontFamily: 'Livvic',
+            ),
           ),
         )),
 
