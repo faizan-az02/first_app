@@ -10,9 +10,17 @@ void main() {
       ),
 
       body: Container(
-        color: Colors.lightBlueAccent,
+        color: const Color.fromARGB(255, 223, 64, 255),
         child: Center(
-          child: Text("Testing Center"),
+          child: Text(
+            "Hello World",
+            style: TextStyle(
+              fontSize: 20,
+              color: Colors.white,
+              fontWeight: FontWeight.bold,
+              letterSpacing: 2,
+            )
+          ),
         )),
 
       floatingActionButton: FloatingActionButton(
