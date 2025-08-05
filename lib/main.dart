@@ -27,33 +27,6 @@ class Home extends StatelessWidget {
           ),
         centerTitle: true,
       ),
-
-      body: Column(
-
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-
-        children: [
-
-          Text(
-            "Hello",
-          ),
-
-          Container(
-            color: Color.fromARGB(55, 108, 33, 238),
-            padding: EdgeInsets.all(30),
-            child: Text("Hello From Container"),
-          ),
-
-          TextButton(
-            onPressed: () {},
-            style: TextButton.styleFrom(
-              backgroundColor: Colors.blue,
-              foregroundColor: Colors.white,
-            ),
-            child: Text("Click me")
-          )
-        ]
-      )
     );
   }
 }
