@@ -13,10 +13,11 @@ class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: const Color.fromRGBO(209, 186, 248, 1),
       appBar: AppBar(
         backgroundColor: const Color.fromARGB(255, 108, 33, 238),
         title: Text(
-          "FIRST APP",
+          "ID CARD",
           style: TextStyle(
             fontSize: 30,
             fontWeight: FontWeight.bold,
@@ -27,6 +28,59 @@ class Home extends StatelessWidget {
           ),
         centerTitle: true,
       ),
+
+      body: Padding(
+        padding: EdgeInsetsGeometry.all(30),
+        child: Column(
+
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text(
+              'NAME',
+              style: TextStyle(
+                color: Colors.white,
+                letterSpacing: 2,
+              ),
+            ),
+
+            SizedBox(height: 5,),
+
+            Text(
+              'Faizan',
+              style: TextStyle(
+                color: Colors.white,
+                fontSize: 28,
+                letterSpacing: 1,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+
+            SizedBox(height: 30,),
+
+            Text(
+              'CLASS',
+              style: TextStyle(
+                color: Colors.white,
+                letterSpacing: 2,
+              ),
+            ),
+
+            SizedBox(height: 5,),
+
+            Text(
+              'BS DS',
+              style: TextStyle(
+                color: Colors.white,
+                fontSize: 28,
+                letterSpacing: 1,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+
+            SizedBox(height: 30,)
+          ],
+          )
+        )
     );
   }
 }
