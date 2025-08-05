@@ -4,8 +4,16 @@ void main() {
   runApp(MaterialApp(home: Home()));
 }
 
-class Home extends StatelessWidget {
+class Home extends StatefulWidget {
   const Home({super.key});
+
+  @override
+  State<Home> createState() => _HomeState();
+}
+
+class _HomeState extends State<Home> {
+
+  int flutterLevel = 1;
 
   @override
   Widget build(BuildContext context) {
@@ -106,6 +114,29 @@ class Home extends StatelessWidget {
               ),
             ),
 
+            SizedBox(height: 30),
+
+            Text(
+              'FLUTTER LEVEL',
+              style: TextStyle(
+                fontWeight: FontWeight.bold,
+                color: Colors.white,
+                letterSpacing: 2,
+              ),
+            ),
+
+            SizedBox(height: 5),
+
+            Text(
+              '$flutterLevel',
+              style: TextStyle(
+                color: Colors.white,
+                fontSize: 28,
+                letterSpacing: 1,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+
             SizedBox(height: 50),
 
             Column(
@@ -184,6 +215,21 @@ class Home extends StatelessWidget {
           ],
         ),
       ),
+
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+
+          setState((){
+
+            flutterLevel += 1;
+
+            }
+          );
+        },
+        
+        child: Icon(Icons.add), 
+        ),
+
     );
   }
 }
