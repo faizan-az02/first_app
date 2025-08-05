@@ -38,19 +38,19 @@ class Home extends StatelessWidget {
             "Hello",
           ),
 
-          TextButton(
-            onPressed: () {},
-            child: Text("Click me"),
-            style: TextButton.styleFrom(
-              backgroundColor: Colors.blue,
-              foregroundColor: Colors.white,
-            )
-          ),
-
           Container(
             color: Color.fromARGB(55, 108, 33, 238),
             padding: EdgeInsets.all(30),
             child: Text("Hello From Container"),
+          ),
+
+          TextButton(
+            onPressed: () {},
+            style: TextButton.styleFrom(
+              backgroundColor: Colors.blue,
+              foregroundColor: Colors.white,
+            ),
+            child: Text("Click me")
           )
         ]
       )
