@@ -31,16 +31,11 @@ class Home extends StatelessWidget {
       body: Container(
         color: const Color.fromARGB(255, 223, 64, 255),
         child: Center(
-          child: Text(
-            "Hello World",
-            style: TextStyle(
-              fontSize: 20,
-              color: Colors.white,
-              fontWeight: FontWeight.bold,
-              letterSpacing: 1.5,
-              fontFamily: 'Livvic',
-            ),
-          ),
+          child: Image(
+            image: NetworkImage(
+              "https://images.unsplash.com/photo-1505506874110-6a7a69069a08?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+            )
+          )
         )),
 
       floatingActionButton: FloatingActionButton(
