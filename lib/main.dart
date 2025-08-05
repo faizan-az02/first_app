@@ -28,8 +28,30 @@ class Home extends StatelessWidget {
         centerTitle: true,
       ),
 
-      body: Container(
-        color: const Color.fromARGB(55, 108, 33, 238),
+      body: Row(
+
+        children: [
+
+          Padding(
+            padding: EdgeInsets.all(10),
+            child: Text("Hello"),
+          ),
+
+          TextButton(
+            onPressed: () {},
+            child: Text("Click me"),
+            style: TextButton.styleFrom(
+              backgroundColor: Colors.blue,
+              foregroundColor: Colors.white,
+            )
+          ),
+
+          Container(
+            color: Color.fromARGB(55, 108, 33, 238),
+            padding: EdgeInsets.all(30),
+            child: Text("Hello From Container"),
+          )
+        ]
       )
     );
   }
