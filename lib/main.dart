@@ -51,20 +51,10 @@ class _HomeState extends State<Home> {
 
             Padding(
               padding: const EdgeInsets.all(8.0),
-              child: Column(
-                children: [
-                  Divider(
-                    height: 6,
-                    thickness: 3,
-                    color: const Color.fromARGB(255, 153, 101, 243),
-                  ),
-
-                  Divider(
-                    height: 6,
-                    thickness: 3,
-                    color: const Color.fromARGB(255, 153, 101, 243),
-                  ),
-                ],
+              child: Divider(
+                height: 6,
+                thickness: 3,
+                color: const Color.fromARGB(255, 153, 101, 243),
               ),
             ),
 
@@ -226,7 +216,7 @@ class _HomeState extends State<Home> {
             }
           );
         },
-        
+
         child: Icon(Icons.add), 
         ),
 
