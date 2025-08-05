@@ -13,7 +13,9 @@ class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+
       backgroundColor: const Color.fromRGBO(209, 186, 248, 1),
+
       appBar: AppBar(
         backgroundColor: const Color.fromARGB(255, 108, 33, 238),
         title: Text(
@@ -30,11 +32,26 @@ class Home extends StatelessWidget {
       ),
 
       body: Padding(
-        padding: EdgeInsetsGeometry.all(30),
+        padding: EdgeInsetsGeometry.symmetric(vertical: 70, horizontal: 30),
         child: Column(
 
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
+            Center(
+              child: CircleAvatar(
+                backgroundImage: AssetImage('assets/pic.jpg'),
+                radius: 80,
+              ),
+            ),
+
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Divider(
+                height: 40,
+                color: const Color.fromARGB(255, 108, 33, 238),
+              ),
+            ),
+
             Text(
               'NAME',
               style: TextStyle(
@@ -77,7 +94,82 @@ class Home extends StatelessWidget {
               ),
             ),
 
-            SizedBox(height: 30,)
+            SizedBox(height: 50,),
+
+            Column(
+              children: [
+
+                Row(
+                  children: [
+                    Icon(
+                      Icons.email,
+                      color: const Color.fromARGB(255, 108, 33, 238),
+                      ),
+
+                    Padding(
+                      padding: const EdgeInsets.fromLTRB(10, 0, 0, 0),
+                      child: Text(
+                        "i221946@nu.edu.pk",
+                      style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 20,
+                      letterSpacing: 1,
+                      fontWeight: FontWeight.bold
+                          ),
+                        ),
+                      ),
+                  ],
+                ),
+
+                SizedBox(height: 10,),
+
+                Row(
+                  children: [
+                    Icon(
+                    Icons.phone,
+                      color: const Color.fromARGB(255, 108, 33, 238),
+                    ),
+                    
+                    Padding(
+                      padding: const EdgeInsets.fromLTRB(10, 0, 0, 0),
+                      child: Text(
+                        "03231589560",
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 20,
+                          letterSpacing: 1,
+                          fontWeight: FontWeight.bold
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+
+                SizedBox(height: 10,),
+
+                Row(
+                  children: [
+                    Icon(
+                    Icons.home,
+                      color: const Color.fromARGB(255, 108, 33, 238),
+                    ),
+                    
+                    Padding(
+                      padding: const EdgeInsets.fromLTRB(10, 0, 0, 0),
+                      child: Text(
+                        "Murree Road, RWP",
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 20,
+                          letterSpacing: 1,
+                          fontWeight: FontWeight.bold
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ],
+              )
           ],
           )
         )
