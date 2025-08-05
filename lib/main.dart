@@ -28,16 +28,9 @@ class Home extends StatelessWidget {
         centerTitle: true,
       ),
 
-      body: Center(
-        child: IconButton(
-          onPressed: () {},
-          style: IconButton.styleFrom(
-            backgroundColor: Colors.blue,
-            foregroundColor: Colors.white,
-          ),
-          icon: Icon(Icons.add),
-        ),
-      ),
+      body: Container(
+        color: const Color.fromARGB(55, 108, 33, 238),
+      )
     );
   }
 }
