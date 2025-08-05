@@ -33,7 +33,7 @@ class Home extends StatelessWidget {
         child: Center(
           child: Image(
             image: AssetImage(
-              'assets/Galaxy.jpg'
+              'assets/Beam.jpg'
             ),
           )
         )),
