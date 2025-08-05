@@ -28,7 +28,7 @@ class Home extends StatelessWidget {
         centerTitle: true,
       ),
 
-      body: Row(
+      body: Column(
 
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
 
