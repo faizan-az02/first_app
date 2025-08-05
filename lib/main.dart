@@ -16,7 +16,7 @@ class Home extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: const Color.fromARGB(255, 108, 33, 238),
         title: Text(
-          "First App",
+          "FIRST APP",
           style: TextStyle(
             fontSize: 30,
             fontWeight: FontWeight.bold,
@@ -31,11 +31,7 @@ class Home extends StatelessWidget {
       body: Container(
         color: const Color.fromARGB(255, 223, 64, 255),
         child: Center(
-          child: Image(
-            image: AssetImage(
-              'assets/Beam.jpg'
-            ),
-          )
+          child: Image.asset('assets/Beam.jpg'),
         )),
 
       floatingActionButton: FloatingActionButton(
