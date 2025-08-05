@@ -39,7 +39,6 @@ class Home extends StatelessWidget {
         backgroundColor: const Color.fromARGB(255, 255, 255, 255),
         child: Text('Press'),
       ),
-
     );
   }
 }
