@@ -44,17 +44,33 @@ class Home extends StatelessWidget {
               ),
             ),
 
+            SizedBox(height: 15,),
+
             Padding(
               padding: const EdgeInsets.all(8.0),
-              child: Divider(
-                height: 40,
-                color: const Color.fromARGB(255, 108, 33, 238),
+              child: Column(
+                children: [
+                  Divider(
+                    height: 6,
+                    thickness: 3,
+                    color: const Color.fromARGB(255, 153, 101, 243),
+                  ),
+
+                  Divider(
+                    height: 6,
+                    thickness: 3,
+                    color: const Color.fromARGB(255, 153, 101, 243),
+                  ),
+                ],
               ),
             ),
+
+            SizedBox(height: 15,),
 
             Text(
               'NAME',
               style: TextStyle(
+                fontWeight: FontWeight.bold,
                 color: Colors.white,
                 letterSpacing: 2,
               ),
@@ -77,6 +93,7 @@ class Home extends StatelessWidget {
             Text(
               'CLASS',
               style: TextStyle(
+                fontWeight: FontWeight.bold,
                 color: Colors.white,
                 letterSpacing: 2,
               ),
