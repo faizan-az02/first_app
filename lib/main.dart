@@ -13,8 +13,13 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
-
-  Person person = Person(name: 'Faizan', phone: '03231589560', address: 'Murree Road, RWP', email: "i221946@nu.edu.pk", degree: 'BS DS');
+  Person person = Person(
+    name: 'Faizan',
+    phone: '03231589560',
+    address: 'Murree Road, RWP',
+    email: "i221946@nu.edu.pk",
+    degree: 'BS DS',
+  );
 
   int flutterLevel = 1;
 
@@ -211,18 +216,13 @@ class _HomeState extends State<Home> {
 
       floatingActionButton: FloatingActionButton(
         onPressed: () {
-
-          setState((){
-
+          setState(() {
             flutterLevel += 1;
-
-            }
-          );
+          });
         },
 
-        child: Icon(Icons.add), 
-        ),
-
+        child: Icon(Icons.add),
+      ),
     );
   }
 }
