@@ -28,16 +28,15 @@ class Home extends StatelessWidget {
         centerTitle: true,
       ),
 
-      body: Container(
-        color: const Color.fromARGB(255, 223, 64, 255),
-        child: Center(
-          child: Image.asset('assets/Beam.jpg'),
-        )),
-
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {},
-        backgroundColor: const Color.fromARGB(255, 255, 255, 255),
-        child: Text('Press'),
+      body: Center(
+        child: IconButton(
+          onPressed: () {},
+          style: IconButton.styleFrom(
+            backgroundColor: Colors.blue,
+            foregroundColor: Colors.white,
+          ),
+          icon: Icon(Icons.add),
+        ),
       ),
     );
   }
