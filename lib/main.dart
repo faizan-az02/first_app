@@ -30,11 +30,12 @@ class Home extends StatelessWidget {
 
       body: Row(
 
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+
         children: [
 
-          Padding(
-            padding: EdgeInsets.all(10),
-            child: Text("Hello"),
+          Text(
+            "Hello",
           ),
 
           TextButton(
