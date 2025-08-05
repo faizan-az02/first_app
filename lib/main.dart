@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'person.dart';
 
 void main() {
   runApp(MaterialApp(home: Home()));
@@ -12,6 +13,8 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
+
+  Person person = Person(name: 'Faizan', phone: '03231589560', address: 'Murree Road, RWP', email: "i221946@nu.edu.pk", degree: 'BS DS');
 
   int flutterLevel = 1;
 
@@ -72,7 +75,7 @@ class _HomeState extends State<Home> {
             SizedBox(height: 5),
 
             Text(
-              'Faizan',
+              '${person.name}',
               style: TextStyle(
                 color: Colors.white,
                 fontSize: 28,
@@ -95,7 +98,7 @@ class _HomeState extends State<Home> {
             SizedBox(height: 5),
 
             Text(
-              'BS DS',
+              '${person.degree}',
               style: TextStyle(
                 color: Colors.white,
                 fontSize: 28,
@@ -141,7 +144,7 @@ class _HomeState extends State<Home> {
                     Padding(
                       padding: const EdgeInsets.fromLTRB(10, 0, 0, 0),
                       child: Text(
-                        "i221946@nu.edu.pk",
+                        "${person.email}",
                         style: TextStyle(
                           color: Colors.white,
                           fontSize: 20,
@@ -165,7 +168,7 @@ class _HomeState extends State<Home> {
                     Padding(
                       padding: const EdgeInsets.fromLTRB(10, 0, 0, 0),
                       child: Text(
-                        "03231589560",
+                        "${person.phone}",
                         style: TextStyle(
                           color: Colors.white,
                           fontSize: 20,
@@ -189,7 +192,7 @@ class _HomeState extends State<Home> {
                     Padding(
                       padding: const EdgeInsets.fromLTRB(10, 0, 0, 0),
                       child: Text(
-                        "Murree Road, RWP",
+                        "${person.address}",
                         style: TextStyle(
                           color: Colors.white,
                           fontSize: 20,
