@@ -2,10 +2,29 @@ import 'package:flutter/material.dart';
 
 void main() {
   runApp(MaterialApp(
-    home: Scaffold(
+    home: Home(),
+  ));
+}
+
+class Home extends StatelessWidget {
+  
+  const Home({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
       appBar: AppBar(
         backgroundColor: const Color.fromARGB(255, 108, 33, 238),
-        title: Text("First App"),
+        title: Text(
+          "First App",
+          style: TextStyle(
+            fontSize: 30,
+            fontWeight: FontWeight.bold,
+            fontFamily: "Livvic",
+            letterSpacing: 2,
+            color: Colors.white,
+          )
+          ),
         centerTitle: true,
       ),
 
@@ -18,7 +37,7 @@ void main() {
               fontSize: 20,
               color: Colors.white,
               fontWeight: FontWeight.bold,
-              letterSpacing: 2,
+              letterSpacing: 1.5,
               fontFamily: 'Livvic',
             ),
           ),
@@ -30,7 +49,6 @@ void main() {
         child: Text('Press'),
       ),
 
-    ),
-  ));
+    );
+  }
 }
-
