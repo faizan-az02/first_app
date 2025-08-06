@@ -75,9 +75,9 @@ The app uses a consistent purple theme:
 
 ## Future Enhancements
 
-- [ ] Add user registration functionality
-- [ ] Implement secure credential storage
-- [ ] Add profile editing capabilities
-- [ ] Integrate with backend services
-- [ ] Add dark mode support
-- [ ] Implement biometric authentication
+- Add user registration functionality
+- Implement secure credential storage
+- Add profile editing capabilities
+- Integrate with backend services
+- Add dark mode support
+- Implement biometric authentication
