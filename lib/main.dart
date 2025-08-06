@@ -216,9 +216,14 @@ class _HomeState extends State<Home> {
 
       floatingActionButton: FloatingActionButton(
         onPressed: () {
-          setState(() {
-            flutterLevel += 1;
-          });
+
+          if (flutterLevel < 9){
+
+            setState(() {
+              flutterLevel += 1;
+            });
+
+          }
         },
 
         child: Icon(Icons.add),
