@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'loading.dart';
 import 'home.dart';
+import 'dart:convert';
 
 class Login extends StatefulWidget {
   const Login({super.key});
@@ -11,8 +13,7 @@ class Login extends StatefulWidget {
 
 class _LoginState extends State<Login> {
 
-  final String email = "i221946@nu.edu.pk";
-  final String password = "pass2232";
+  Map<String, dynamic>? credentials;
 
   final TextEditingController emailController = TextEditingController();
   final TextEditingController passwordController = TextEditingController();
@@ -25,7 +26,7 @@ class _LoginState extends State<Login> {
     if (value == null || value.isEmpty) {
       return 'Email is required';
     }
-    if (value != email) {
+    if (value != credentials?['email']) {
       return 'Invalid email address';
     }
     return null;
@@ -35,7 +36,7 @@ class _LoginState extends State<Login> {
     if (value == null || value.isEmpty) {
       return 'Password is required';
     }
-    if (value != password) {
+    if (value != credentials?['password']) {
       return 'Invalid password';
     }
     return null;
@@ -57,6 +58,24 @@ class _LoginState extends State<Login> {
   }
 
   @override
+
+  void initState() {
+    super.initState();
+    loadCredentials();
+  }
+
+
+  void loadCredentials() async {
+    try {
+      final String response = await rootBundle.loadString('assets/creds.json');
+      setState(() {
+        credentials = jsonDecode(response);
+      });
+    } catch (e) {
+      print('Error loading credentials: $e');
+    }
+  }
+  
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: const Color.fromRGBO(209, 186, 248, 1),
