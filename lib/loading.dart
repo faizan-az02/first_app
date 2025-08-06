@@ -1,10 +1,36 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
+import 'home.dart';
 
-class Loading extends StatelessWidget {
-  const Loading({super.key});
+
+class Loading extends StatefulWidget {
+
+  final String destination;
+
+  const Loading({super.key, required this.destination});
 
   @override
+  State<Loading> createState() => _LoadingState();
+}
+
+class _LoadingState extends State<Loading> {
+  @override
+
+  void initState() {
+    super.initState();
+    Future.delayed(Duration(seconds: 4), () {
+      // Navigate based on destination
+      switch (widget.destination) {
+        case 'home':
+          Navigator.pushReplacement(
+            context,
+            MaterialPageRoute(builder: (context) => Home()),
+          );
+          break;
+      }
+    });
+  }
+
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: const Color.fromARGB(255, 108, 33, 238),
@@ -16,10 +42,24 @@ class Loading extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
 
           children: [
-            SpinKitFoldingCube(color: const Color.fromARGB(255, 255, 255, 255), size: 50.0),
+            SpinKitFoldingCube(
+              color: const Color.fromARGB(255, 255, 255, 255), size: 50.0
+              ),
+              SizedBox(height: 20),
+              Text(
+                'Fetching Your Details...',
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 20,
+                  fontWeight: FontWeight.bold,
+                  fontFamily: 'Livvic',
+                ),
+              ),
           ],
         ),
       ),
     );
   }
 }
+
+

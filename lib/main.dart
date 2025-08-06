@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'loading.dart';
+import 'login.dart';
+import 'home.dart';
 
 void main() {
-  runApp(MaterialApp(home: Loading()));
+  runApp(MaterialApp(home: Login()));
 }
 
