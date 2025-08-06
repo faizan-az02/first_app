@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'person.dart';
+import 'login.dart';
 
 class Home extends StatefulWidget {
   const Home({super.key});
@@ -27,7 +28,7 @@ class _HomeState extends State<Home> {
       appBar: AppBar(
         backgroundColor: const Color.fromARGB(255, 108, 33, 238),
         title: Text(
-          "ID CARD",
+          "DETAILS",
           style: TextStyle(
             fontSize: 30,
             fontWeight: FontWeight.bold,
@@ -36,11 +37,33 @@ class _HomeState extends State<Home> {
             color: Colors.white,
           ),
         ),
-        centerTitle: true,
+        actions: [
+          ElevatedButton(
+            style: ElevatedButton.styleFrom(
+              backgroundColor: const Color.fromARGB(255, 108, 33, 238),
+              foregroundColor: Colors.white,
+              padding: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+              shape: RoundedRectangleBorder(
+                side: BorderSide(color: Colors.white),
+                borderRadius: BorderRadius.circular(10),
+              ),
+            ),
+            onPressed: () {
+              Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => Login()));
+            },
+            child: Text(
+              "LOGOUT",
+              style: TextStyle(
+                fontSize: 14,
+                fontWeight: FontWeight.bold,
+                fontFamily: "Livvic",
+              ),
+            ),
+          ),
+        ],
       ),
-
       body: Padding(
-        padding: EdgeInsetsGeometry.symmetric(vertical: 70, horizontal: 30),
+        padding: EdgeInsets.symmetric(vertical: 70, horizontal: 30),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -73,7 +96,7 @@ class _HomeState extends State<Home> {
               ),
             ),
 
-            SizedBox(height: 5),
+            SizedBox(height: 1),
 
             Text(
               '${person.name}',
@@ -85,7 +108,7 @@ class _HomeState extends State<Home> {
               ),
             ),
 
-            SizedBox(height: 30),
+            SizedBox(height: 25),
 
             Text(
               'CLASS',
@@ -96,7 +119,7 @@ class _HomeState extends State<Home> {
               ),
             ),
 
-            SizedBox(height: 5),
+            SizedBox(height: 1),
 
             Text(
               '${person.degree}',
@@ -108,7 +131,7 @@ class _HomeState extends State<Home> {
               ),
             ),
 
-            SizedBox(height: 30),
+            SizedBox(height: 25),
 
             Text(
               'FLUTTER LEVEL',
@@ -119,7 +142,7 @@ class _HomeState extends State<Home> {
               ),
             ),
 
-            SizedBox(height: 5),
+            SizedBox(height: 1),
 
             Text(
               '$flutterLevel',
@@ -131,7 +154,7 @@ class _HomeState extends State<Home> {
               ),
             ),
 
-            SizedBox(height: 50),
+            SizedBox(height: 40),
 
             Column(
               children: [
@@ -157,7 +180,7 @@ class _HomeState extends State<Home> {
                   ],
                 ),
 
-                SizedBox(height: 10),
+                SizedBox(height: 5),
 
                 Row(
                   children: [
@@ -181,7 +204,7 @@ class _HomeState extends State<Home> {
                   ],
                 ),
 
-                SizedBox(height: 10),
+                SizedBox(height: 5),
 
                 Row(
                   children: [
