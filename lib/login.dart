@@ -53,7 +53,7 @@ class _LoginState extends State<Login> {
         ),
       );
       // Here you would typically navigate to the next screen
-      Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => Loading(destination: 'home')));
+      Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => Loading(destination: 'home', message: 'Fetching Your Details...', delay: 4)));
     }
   }
 

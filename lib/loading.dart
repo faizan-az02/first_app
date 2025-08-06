@@ -1,13 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'home.dart';
+import 'login.dart';
 
 
 class Loading extends StatefulWidget {
 
   final String destination;
+  final String message;
+  final int delay;
 
-  const Loading({super.key, required this.destination});
+  const Loading({super.key, required this.destination, required this.message, required this.delay});
 
   @override
   State<Loading> createState() => _LoadingState();
@@ -18,13 +21,19 @@ class _LoadingState extends State<Loading> {
 
   void initState() {
     super.initState();
-    Future.delayed(Duration(seconds: 4), () {
+    Future.delayed(Duration(seconds: widget.delay), () {
       // Navigate based on destination
       switch (widget.destination) {
         case 'home':
           Navigator.pushReplacement(
             context,
             MaterialPageRoute(builder: (context) => Home()),
+          );
+          break;
+        case 'login':
+          Navigator.pushReplacement(
+            context,
+            MaterialPageRoute(builder: (context) => Login()),
           );
           break;
       }
@@ -47,7 +56,7 @@ class _LoadingState extends State<Loading> {
               ),
               SizedBox(height: 20),
               Text(
-                'Fetching Your Details...',
+                '${widget.message}',
                 style: TextStyle(
                   color: Colors.white,
                   fontSize: 20,
